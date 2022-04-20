@@ -20,7 +20,19 @@ export default class StorageStack extends sst.Stack {
     });
     // Public reference to the bucket
 
-    this.bucket = new sst.Bucket(this, "Uploads");
+    this.bucket = new sst.Bucket(this, "Uploads", {
+      s3Bucket: {
+        // Allow client side access to the bucket from a different domain
+        cors: [
+          {
+            maxAge: 3000,
+            allowedOrigins: ["*"],
+            allowedHeaders: ["*"],
+            allowedMethods: ["GET", "PUT", "POST", "DELETE", "HEAD"],
+          },
+        ],
+      },
+    });
 
   }
 }
