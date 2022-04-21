@@ -19,6 +19,13 @@
     "@serverless-stack/resources": "^0.69.6",
     "aws-cdk-lib": "2.15.0",
     "aws-sdk": "^2.1117.0",
+    "cra-template": "1.2.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-scripts": "5.0.1",
     "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@serverless-stack/static-site-env": "^0.69.6"
   }
 }
